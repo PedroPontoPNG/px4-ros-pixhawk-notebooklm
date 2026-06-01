@@ -32,13 +32,3 @@ Para alimentar a base de conhecimento (grounding) do NotebookLM, foram seleciona
    * 📁 *Disponível em: `[/fontes/Getting-Started-as-a-contributor-on-PX4.pdf](https://px4.io/wp-content/uploads/2020/07/Getting-Started-as-a-contributor-on-PX4.pdf)`*
 
 ---
-
-## 🛠️ Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
-
-Abaixo estão registadas as iterações e refinamentos estratégicos realizados no NotebookLM para extrair informações precisas, evitando que a IA misturasse conceitos de ROS 1 com ROS 2 ou falhasse em detalhes de hardware.
-
-### Caso de Uso 1: Diferenciação de Estrutura de Workspaces (ROS 1 vs ROS 2)
-* **Prompt Inicial (Teste 1):** *"Como criar e compilar um pacote de navegação de acordo com os PDFs?"*
-* **Resultado Obtido:** O NotebookLM misturou a estrutura do espaço de trabalho do ROS 1 (`catkin_ws` com o diretório `devel`) com os comandos do ROS 2.
-* **Troubleshooting ("Cicatriz"):** Percebi que precisava de delimitar rigidamente qual o paradigma de software pretendido, forçando o NotebookLM a olhar para as fontes de forma isolada.
-* **Prompt Refinado (Final):** *"Com base exclusivamente nas apresentações do Prof. Walter Fetter Lages, crie uma tabela comparativa evidenciando a estrutura de diretórios temporários e finais de um workspace em
